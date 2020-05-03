@@ -6,9 +6,15 @@ echo "$var"
 declare -a board
 PLAYER=X;
 COMPUTER=O;
+HEAD=1;
+TAIL=0;
 
-function InitializingBoard(){
 board=(0,0,0,0,0,0,0,0,0)
-}
 
-InitializingBoard
+checkToss=$((RANDOM%2))
+if [[ $checkToss == $HEAD ]]
+then
+	echo "Player plays first"
+else
+	echo "Computer plays First"
+fi
